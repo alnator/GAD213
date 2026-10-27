@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -46,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
     private float previousTimeScale;
     private float previousFixedDeltaTime;
     public bool isMoving;
+    [SerializeField] Animator animator;
+    [SerializeField] private Volume slowMotionVolume;
+    [SerializeField] private float fadeSpeed = 0.5f;
+
+    private float targetWeight;
 
     private void Awake()
     {
@@ -71,6 +77,11 @@ public class PlayerMovement : MonoBehaviour
         TryStartDash();
         UpdateSprite();
         UpdateAimLine();
+        slowMotionVolume.weight = Mathf.MoveTowards(
+        slowMotionVolume.weight,
+        targetWeight,
+        fadeSpeed * Time.unscaledDeltaTime
+);
     }
 
     private void FixedUpdate()
@@ -99,14 +110,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A)) moveInput -= 1f;
         if (Input.GetKey(KeyCode.D)) moveInput += 1f;
-        if(Mathf.Abs(moveInput)> 0 )
-        {
-            isMoving = true;
-        }
-        else
-        {
-            isMoving = false;
-        }
+        isMoving = moveInput != 0f;
+        animator.SetBool("isMoving", isMoving);
+
 
         if (Input.GetKeyDown(KeyCode.Space))
             jumpBufferTimer = jumpBufferTime;
@@ -125,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
         aiming = true;
         previousTimeScale = Time.timeScale;
         previousFixedDeltaTime = Time.fixedDeltaTime;
+        targetWeight = 1f;
 
         Time.timeScale = AimTimeScale;
         Time.fixedDeltaTime = previousFixedDeltaTime * AimTimeScale;
@@ -164,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
         aiming = false;
         Time.timeScale = previousTimeScale;
         Time.fixedDeltaTime = previousFixedDeltaTime;
+        targetWeight = 0f;
         aimLine.enabled = false;
     }
 
