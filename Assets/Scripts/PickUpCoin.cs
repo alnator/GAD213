@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PickUpCoin : MonoBehaviour
+public class PickUpCoin : MonoBehaviour // Coins aren't suppose to add dashes, they suppose to add balance.
 {
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,7 +13,7 @@ public class PickUpCoin : MonoBehaviour
         if(playerMovement !=null)
         {
             Debug.Log("adding");
-            playerMovement.AddDash();
+            playerMovement.AddDash();// remove with shop.
             //audiomanager.playsound(blalbalblablablalq)
             Destroy(gameObject);
         }

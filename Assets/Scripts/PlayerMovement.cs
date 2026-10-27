@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Time settings before aiming
     private float previousTimeScale;
     private float previousFixedDeltaTime;
-    
+    public bool isMoving;
 
     private void Awake()
     {
@@ -99,6 +99,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A)) moveInput -= 1f;
         if (Input.GetKey(KeyCode.D)) moveInput += 1f;
+        if(Mathf.Abs(moveInput)> 0 )
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
             jumpBufferTimer = jumpBufferTime;
@@ -255,7 +263,6 @@ public class PlayerMovement : MonoBehaviour
     {
         return amountOfDashes;
     }
-
     public bool IsAiming()
     {
         return aiming;
