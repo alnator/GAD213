@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Dash")]
     [SerializeField] private int amountOfDashes = 1;
+    [SerializeField] private float AimTimeScale = 0.3f;
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashDuration;
 
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Time settings before aiming
     private float previousTimeScale;
     private float previousFixedDeltaTime;
-    private const float AimTimeScale = 0.3f;
+    
 
     private void Awake()
     {

@@ -1,7 +1,6 @@
-using NUnit.Framework;
 using UnityEngine;
 
-public class PickUpSphere : MonoBehaviour
+public class PickUpCoin : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
