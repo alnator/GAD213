@@ -3,6 +3,7 @@ public class PlayerRespawn : MonoBehaviour
 {
     [SerializeField] Vector2 respawnPosition;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] PlayerMovement playerMovement;
     private Quaternion respawnRotation;
     private GameObject respawnObjects;
     void Start()
@@ -37,7 +38,7 @@ public class PlayerRespawn : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             respawnObjects = GameObject.Find("EverythingToRespawn");    
             respawnObjects.GetComponent<ObjectivesToRespawn>().RespawnObjects(); // searches the exact name of parent and calls for respawnObjects
-
+            playerMovement.StartNewLevel();
 //             rb.angularVelocity = Vector2.zero;
 
         }
