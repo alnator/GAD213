@@ -1,16 +1,17 @@
-//using UnityEditor.Callbacks;
 using UnityEngine;
 public class PlayerRespawn : MonoBehaviour
 {
     [SerializeField] Vector2 respawnPosition;
     [SerializeField] Rigidbody2D rb;
     private Quaternion respawnRotation;
+    private GameObject respawnObjects;
     void Start()
 
     {
         rb = GetComponent<Rigidbody2D>();
         respawnRotation = transform.rotation;
         respawnPosition = transform.position;
+        
     }
 
     void Update()
@@ -34,12 +35,15 @@ public class PlayerRespawn : MonoBehaviour
             transform.position = respawnPosition;
 
             rb.linearVelocity = Vector2.zero;
+            respawnObjects = GameObject.Find("EverythingToRespawn");    
+            respawnObjects.GetComponent<ObjectivesToRespawn>().RespawnObjects(); // searches the exact name of parent and calls for respawnObjects
 
 //             rb.angularVelocity = Vector2.zero;
 
         }
 
     }
+
 
     public void SetCheckpoint(Vector2 newRespawnPosition, Quaternion newRespawnRotation)
 

@@ -18,12 +18,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.15f;
 
     [Header("Dash")]
-    [SerializeField] private int amountOfDashes = 1;
+    private int amountOfDashes;
+    [SerializeField] public int maxDashes = 1;
     [SerializeField] private float AimTimeScale = 0.3f;
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashDuration;
 
     // Components
+    [SerializeField] PlayerStats playerStats;
     private Rigidbody2D rb;
     private Collider2D playerCollider;
     private LineRenderer aimLine;
@@ -58,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         aimLine = GetComponent<LineRenderer>();
+        amountOfDashes = playerStats.maxDashes;
 
         rb.gravityScale = baseGravityScale;
         aimLine.positionCount = 2;
@@ -80,8 +83,7 @@ public class PlayerMovement : MonoBehaviour
         slowMotionVolume.weight = Mathf.MoveTowards(
         slowMotionVolume.weight,
         targetWeight,
-        fadeSpeed * Time.unscaledDeltaTime
-);
+        fadeSpeed * Time.unscaledDeltaTime);
     }
 
     private void FixedUpdate()
@@ -266,11 +268,6 @@ public class PlayerMovement : MonoBehaviour
         if (aimLine != null) aimLine.enabled = false;
         if (rb != null) rb.gravityScale = baseGravityScale;
     }
-
-    public int DashCount()
-    {
-        return amountOfDashes;
-    }
     public bool IsAiming()
     {
         return aiming;
@@ -278,10 +275,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void AddDash()
     {
-        if (amountOfDashes == 0)//redo
+        if (amountOfDashes < playerStats.maxDashes)
             amountOfDashes++;
     }
-
+    public void StartNewLevel()
+    {
+        amountOfDashes = playerStats.maxDashes;
+        //amountOfParry = maxParry;
+        //amountOfDummy = maxDummy; Refernce Nomad's E
+    }
     public bool IsDashing()
     {
         return isDashing;

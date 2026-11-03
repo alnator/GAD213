@@ -15,7 +15,7 @@ public class PickUpCoin : MonoBehaviour // Coins aren't suppose to add dashes, t
             Debug.Log("adding");
             playerMovement.AddDash();// remove with shop.
             //audiomanager.playsound(blalbalblablablalq)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
