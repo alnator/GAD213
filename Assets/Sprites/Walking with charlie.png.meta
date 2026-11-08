@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 1bb5afb605b987040908f2eb4dc443b6
+guid: 31f59158963112246b623315e075174c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3995473263284838558
-    second: Walking with friends 1_0
+      213: 8686489960382759856
+    second: Walking with charlie_0
   - first:
-      213: 564028677464919962
-    second: Walking with friends 1_1
+      213: 7249624625032370929
+    second: Walking with charlie_1
   - first:
-      213: 8466732365808382015
-    second: Walking with friends 1_2
-  - first:
-      213: 1948801440672839094
-    second: Walking with friends 1_3
+      213: 6970314046841672651
+    second: Walking with charlie_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walking with friends 1_0
+      name: Walking with charlie_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 31
         height: 32
-      alignment: 9
-      pivot: {x: 0.60611737, y: 0.50312096}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26f16586c3a3d88c0800000000000000
-      internalID: -3995473263284838558
+      spriteID: 0b38c91989c9c8870800000000000000
+      internalID: 8686489960382759856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking with friends 1_1
+      name: Walking with charlie_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
+        width: 31
         height: 32
-      alignment: 9
-      pivot: {x: 0.58426976, y: 0.52496874}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9f0e630815d3d700800000000000000
-      internalID: 564028677464919962
+      spriteID: 1fa9af1bf27db9460800000000000000
+      internalID: 7249624625032370929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking with friends 1_2
+      name: Walking with charlie_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
+        width: 31
         height: 32
-      alignment: 9
-      pivot: {x: 0.5936332, y: 0.51248425}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f30bf406a30ef7570800000000000000
-      internalID: 8466732365808382015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walking with friends 1_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5873909, y: 0.4968787}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b5f219c5988b0b10800000000000000
-      internalID: 1948801440672839094
+      spriteID: bc3d9eef1b78bb060800000000000000
+      internalID: 6970314046841672651
       vertices: []
       indices: 
       edges: []
@@ -200,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b4a744ce38f99a84281aa4136f13e65d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +183,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Walking with friends 1_0: -3995473263284838558
-      Walking with friends 1_1: 564028677464919962
-      Walking with friends 1_2: 8466732365808382015
-      Walking with friends 1_3: 1948801440672839094
+      Walking with charlie_0: 8686489960382759856
+      Walking with charlie_1: 7249624625032370929
+      Walking with charlie_2: 6970314046841672651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
