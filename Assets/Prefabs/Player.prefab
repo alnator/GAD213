@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 3474945060152487862}
   - component: {fileID: 6703205040092220095}
   - component: {fileID: 9001666294829799801}
+  - component: {fileID: 7307063234049139464}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -218,12 +219,15 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckDistance: 0.05
   jumpBufferTime: 0.15
-  amountOfDashes: 1
+  maxDashes: 1
   AimTimeScale: 0.3
   dashSpeed: 15
   dashDuration: 0.2
+  playerStats: {fileID: 11400000, guid: 1363f43dda139ea418ccc3a011a552b9, type: 2}
   isMoving: 0
   animator: {fileID: 5990300586172064025}
+  slowMotionVolume: {fileID: 3398126957677260571, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+  fadeSpeed: 0.5
 --- !u!120 &6703205040092220095
 LineRenderer:
   serializedVersion: 3
@@ -361,3 +365,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7307063234049139464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931887526735043644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa3d4a8d9554244a9e2b1a380cf8cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  respawnPosition: {x: 0, y: 0}
+  rb: {fileID: 9001666294829799801}
+  playerMovement: {fileID: 3474945060152487862}

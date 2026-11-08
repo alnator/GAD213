@@ -1964,55 +1964,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670605704}
   m_CullTransparentMesh: 1
---- !u!1 &1682581006
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1682581008}
-  - component: {fileID: 1682581007}
-  m_Layer: 0
-  m_Name: SlowTimeVolume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1682581007
+--- !u!114 &1682581007 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3398126957677260571, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+  m_PrefabInstance: {fileID: 1048964655624203329}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682581006}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 0
-  sharedProfile: {fileID: 11400000, guid: 5d1a7848f22bee345b44c8b3ab30989d, type: 2}
---- !u!4 &1682581008
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682581006}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.782433, y: 835.9697, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707204302
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,6 +3765,63 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 2015779165}
+--- !u!1001 &1048964655624203329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -53.782433
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 835.9697
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552119564877244609, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853149845071505769, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+      propertyPath: m_Name
+      value: SlowTimeVolume
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
 --- !u!1001 &3036399214119879639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3952,6 +3971,6 @@ SceneRoots:
   - {fileID: 1903777156}
   - {fileID: 727543018}
   - {fileID: 3036399214119879639}
-  - {fileID: 1682581008}
+  - {fileID: 1048964655624203329}
   - {fileID: 1397653947}
   - {fileID: 138813608}

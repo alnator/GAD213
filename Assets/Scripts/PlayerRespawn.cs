@@ -19,11 +19,11 @@ public class PlayerRespawn : MonoBehaviour
 
     {
 
-        Respawn();
+        FallRespawn();
 
     }
 
-    void Respawn()
+    void FallRespawn()
 
     {
 
@@ -43,6 +43,18 @@ public class PlayerRespawn : MonoBehaviour
 
         }
 
+    }
+    public void DeadRespawn()
+
+    {
+            transform.rotation = respawnRotation;
+
+            transform.position = respawnPosition;
+
+            rb.linearVelocity = Vector2.zero;
+            respawnObjects = GameObject.Find("EverythingToRespawn");    
+            respawnObjects.GetComponent<ObjectivesToRespawn>().RespawnObjects();
+            playerMovement.StartNewLevel();
     }
 
 

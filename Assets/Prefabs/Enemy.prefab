@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 205892568483097406}
   - component: {fileID: 3487457876055894264}
   - component: {fileID: 2783470617772149302}
-  - component: {fileID: 1761581431275961316}
+  - component: {fileID: 4982391795319400202}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,7 +129,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &1761581431275961316
+--- !u!114 &4982391795319400202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,6 +138,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4817035368171906838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31624f6f7d04d4a41a9e5641d48a85cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 22355a45bac388148baccf58748411b1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickUpSphere
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
