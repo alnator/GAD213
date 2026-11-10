@@ -53,8 +53,13 @@ public class PlayerRespawn : MonoBehaviour
 
             rb.linearVelocity = Vector2.zero;
             respawnObjects = GameObject.Find("EverythingToRespawn");    
-            respawnObjects.GetComponent<ObjectivesToRespawn>().RespawnObjects();
             playerMovement.StartNewLevel();
+            if(respawnObjects.GetComponent<ObjectivesToRespawn>()!= null)
+            {
+            
+                respawnObjects.GetComponent<ObjectivesToRespawn>().RespawnObjects();
+            }
+            
     }
 
 
