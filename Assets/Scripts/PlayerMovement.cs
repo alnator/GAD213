@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Gravity")]
     [SerializeField] private float baseGravityScale = 1f;
     [SerializeField] private float fallMultiplier = 3f;
+    [SerializeField] private float coyoteTime = 0.12f;
+    private float coyoteTimer;
 
     [Header("GroundChecker")]
     [SerializeField] private LayerMask groundLayer;
@@ -26,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Components
     [SerializeField] PlayerStats playerStats;
+    [SerializeField] PlayerControls playerControls;
     private Rigidbody2D rb;
     private Collider2D playerCollider;
     private LineRenderer aimLine;
@@ -97,6 +100,14 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             CheckGround();
+            if(isGrounded)
+            {
+                coyoteTimer = coyoteTime;
+            }
+            else
+            {
+                coyoteTimer = coyoteTimer - Time.fixedDeltaTime;
+            }
             Move();
             TryJump();
             TryCutJump();
@@ -162,6 +173,7 @@ public class PlayerMovement : MonoBehaviour
         if (aimDirection.sqrMagnitude == 0f) return;
 
         isDashing = true;
+        coyoteTimer = 0;
         amountOfDashes--;
         dashTimeLeft = dashDuration;
     }
@@ -186,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(
             origin, size, 0f, Vector2.down, groundCheckDistance, groundLayer);
 
-        isGrounded = hit.collider != null;
+        isGrounded = hit.collider != null && (rb.linearVelocity.y) <= 0;
     }
     private void Move()
     {
@@ -195,10 +207,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void TryJump()
     {
-        if (jumpBufferTimer <= 0f || !isGrounded) return;
+        if (jumpBufferTimer <= 0f) return;
+        if(!isGrounded && coyoteTimer <= 0) return;
 
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
         jumpBufferTimer = 0f;
+        coyoteTimer = 0;
     }
 
     private void TryCutJump()
@@ -275,7 +289,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void AddDash()
     {
-        if (amountOfDashes < playerStats.maxDashes)
             amountOfDashes++;
     }
     public void StartNewLevel()

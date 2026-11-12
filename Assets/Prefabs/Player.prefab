@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7037863153573603938}
   - component: {fileID: 3350700924446049828}
   - component: {fileID: 5990300586172064025}
+  - component: {fileID: 4672232471987270966}
   m_Layer: 0
   m_Name: SpriteHolder
   m_TagString: Untagged
@@ -114,6 +115,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4672232471987270966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615596142115680561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70d7057c2ca32543894487d84002836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayFootSound
 --- !u!1 &2931887526735043644
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2931887526735043644}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.21, y: -2.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -161,7 +174,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a3c81c87928a0a8409abc62d9fcad0c8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -213,7 +226,8 @@ MonoBehaviour:
   jumpSpeed: 6
   spriteRenderer: {fileID: 3350700924446049828}
   baseGravityScale: 1
-  fallMultiplier: 3
+  fallMultiplier: 2
+  coyoteTime: 0.12
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -224,9 +238,10 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.2
   playerStats: {fileID: 11400000, guid: 1363f43dda139ea418ccc3a011a552b9, type: 2}
+  playerControls: {fileID: 0}
   isMoving: 0
   animator: {fileID: 5990300586172064025}
-  slowMotionVolume: {fileID: 3398126957677260571, guid: ba7b51632e038cd42acbcec32b126c9a, type: 3}
+  slowMotionVolume: {fileID: 0}
   fadeSpeed: 0.5
 --- !u!120 &6703205040092220095
 LineRenderer:

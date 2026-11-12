@@ -20,10 +20,12 @@ AnimationClip:
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0.46666667
+    - time: 0
       value: {fileID: 7249624625032370929, guid: 31f59158963112246b623315e075174c, type: 3}
-    - time: 0.51666665
+    - time: 0.33333334
       value: {fileID: 8686489960382759856, guid: 31f59158963112246b623315e075174c, type: 3}
+    - time: 0.6666667
+      value: {fileID: 7249624625032370929, guid: 31f59158963112246b623315e075174c, type: 3}
     - time: 1
       value: {fileID: 7249624625032370929, guid: 31f59158963112246b623315e075174c, type: 3}
     attribute: m_Sprite
@@ -51,6 +53,7 @@ AnimationClip:
     - {fileID: 7249624625032370929, guid: 31f59158963112246b623315e075174c, type: 3}
     - {fileID: 8686489960382759856, guid: 31f59158963112246b623315e075174c, type: 3}
     - {fileID: 7249624625032370929, guid: 31f59158963112246b623315e075174c, type: 3}
+    - {fileID: 7249624625032370929, guid: 31f59158963112246b623315e075174c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -76,7 +79,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1
+  - time: 0
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
     functionName: PlaySound
     data: 
     objectReferenceParameter: {fileID: 0}
