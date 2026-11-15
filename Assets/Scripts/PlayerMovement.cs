@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] private Volume slowMotionVolume;
     [SerializeField] private float fadeSpeed = 0.5f;
+    [SerializeField] AbillityImageController abillityImageController;
 
     private float targetWeight;
 
@@ -175,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
         coyoteTimer = 0;
         amountOfDashes--;
+        abillityImageController.ChangeDashIcon();
         dashTimeLeft = dashDuration;
     }
 
@@ -289,16 +291,23 @@ public class PlayerMovement : MonoBehaviour
 
     public void AddDash()
     {
+            if(amountOfDashes == playerStats.maxDashes) return;
             amountOfDashes++;
+            abillityImageController.ChangeDashIcon();
     }
     public void StartNewLevel()
     {
         amountOfDashes = playerStats.maxDashes;
+        abillityImageController.ChangeDashIcon();
         //amountOfParry = maxParry;
         //amountOfDummy = maxDummy; Refernce Nomad's E
     }
     public bool IsDashing()
     {
         return isDashing;
+    }
+    public int AmountOfDashes()
+    {
+        return amountOfDashes;
     }
 }
