@@ -1060,7 +1060,7 @@ Transform:
   m_GameObject: {fileID: 549607997}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.32, y: -3.96, z: -10}
+  m_LocalPosition: {x: -10.24, y: -3.94, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1583,13 +1583,17 @@ PrefabInstance:
       propertyPath: slowMotionVolume
       value: 
       objectReference: {fileID: 566191257}
+    - target: {fileID: 3474945060152487862, guid: 9d14c8307bc1ee649a8945735aecb3b8, type: 3}
+      propertyPath: abillityImageController
+      value: 
+      objectReference: {fileID: 657063318}
     - target: {fileID: 5279849618211242757, guid: 9d14c8307bc1ee649a8945735aecb3b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.32
+      value: -10.24
       objectReference: {fileID: 0}
     - target: {fileID: 5279849618211242757, guid: 9d14c8307bc1ee649a8945735aecb3b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.96
+      value: -3.94
       objectReference: {fileID: 0}
     - target: {fileID: 5279849618211242757, guid: 9d14c8307bc1ee649a8945735aecb3b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2270,9 +2274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.PixelPerfectCamera
   m_ComponentVersion: 1
-  m_AssetsPPU: 135
-  m_RefResolutionX: 1920
-  m_RefResolutionY: 1080
+  m_AssetsPPU: 32
+  m_RefResolutionX: 640
+  m_RefResolutionY: 360
   m_CropFrame: 0
   m_GridSnapping: 0
   m_FilterMode: 0
@@ -2368,7 +2372,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
