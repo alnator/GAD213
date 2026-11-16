@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,8 @@ public class PauseManager : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.Escape))
         {
+
+            Debug.Log("Mepressed");
             if(GameManager.Instance.IsGameOver())
             {
                 return;
